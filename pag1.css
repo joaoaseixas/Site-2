@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    flex-direction: column;
+}
+
+.heart {
+    font-size: 100px;
+    color: red;
+    animation: pulse 2s infinite alternate ease-in-out, colorChange 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.4); }
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: white; }
+    50% { color: pink; }
+    75% { color: cyan; }
+    100% { color: red; }
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transition: 1.5s;
+    color: red;
+    transform: scale(2.0);
+}
